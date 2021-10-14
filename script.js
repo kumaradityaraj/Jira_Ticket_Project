@@ -81,13 +81,11 @@ removeBtn.addEventListener("click", (e) => {
   removeFlag = !removeFlag;
 });
 
-modalCont.addEventListener("keydown", (e) => {
-  let key = e.key;
-  if (key === "Shift") {
-    createTicket(modalPriorityColor, textareaCont.value);
-    addFlag = false;
-    setModalToDefault();
-  }
+let createBtn = document.querySelector(".create-btn");
+createBtn.addEventListener("click", (e) => {
+  createTicket(modalPriorityColor, textareaCont.value);
+  addFlag = false;
+  setModalToDefault();
 });
 
 function createTicket(ticketColor, ticketTask, ticketID) {
